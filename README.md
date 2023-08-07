@@ -110,6 +110,40 @@ Convert favicon_io/android-chrome-192x192.png to 70x70 logo:
 
     cd www && convert favicon_io/android-chrome-192x192.png -scale "70x70" assets/logo.png
 
-# License
+# License original
+MIT © [Dennis Iversen](https://github.com/diversen) -> [ppm-project-manager](https://github.com/diversen/ppm-project-manager)
 
-MIT © [Dennis Iversen](https://github.com/diversen)
+
+---
+---
+---
+
+# comandos úteis
+
+## GIT
+ - lembre se trocar o nome do **branch** de acordo com a necessidade
+
+
+
+### iniciar o repo
+```bash
+git init
+git remote add origin https://github.com/eniodefarias/ppm-project-manager.git
+```
+
+
+### puxar "git pull" da branch 
+```bash    
+git pull -f origin main
+```
+
+### trocar branch main
+```bash    
+git branch main ; git checkout main 
+```
+
+
+
+---
+
+
