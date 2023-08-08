@@ -73,9 +73,9 @@ class Validate extends AppUtils
             throw new JSONException(Lang::translate('Passwords should be at least 7 chars long'));
         }
 
-        if (mb_strtolower($_POST['captcha']) != mb_strtolower($_SESSION['captcha_phrase'])) {
-            throw new JSONException(Lang::translate('Image text does not match'));
-        }
+        //if (mb_strtolower($_POST['captcha']) != mb_strtolower($_SESSION['captcha_phrase'])) {
+        //    throw new JSONException(Lang::translate('Image text does not match'));
+        //}
     }
 
     /**

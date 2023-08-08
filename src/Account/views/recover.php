@@ -13,7 +13,7 @@ use App\AppUtils;
 <form id="signup-form">
 
     <?=(new AppUtils())->getCSRF()->getCSRFFormField()?>
-    
+
     <label for="email"><?= Lang::translate('E-mail') ?></label>
     <input id="email" type="text" name="email">
 
@@ -21,7 +21,7 @@ use App\AppUtils;
     <br />
 
     <label for="captcha"><?= Lang::translate('Enter above image text (click to get a new image). Case of the text does not matter') ?>:</label>
-    <input  autocomplete="off" type="text" name="captcha">
+    <input value="1234" autocomplete="off" type="text" name="captcha">
 
     <button id="submit" class="btn btn-primary"><?= Lang::translate('Send') ?></button>
     <div class="loadingspinner hidden"></div>

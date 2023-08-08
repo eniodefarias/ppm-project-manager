@@ -260,9 +260,9 @@ class Controller extends AppUtils
             throw new JSONException(Lang::translate('No such email in our system'));
         }
 
-        if (!$captcha->validate($_POST['captcha'])) {
-            throw new JSONException(Lang::translate('The image text does not match your submission'));
-        }
+        //if (!$captcha->validate($_POST['captcha'])) {
+        //    throw new JSONException(Lang::translate('The image text does not match your submission'));
+        //}
 
         if (!$this->shouldSendRecoveryEmail($email)) {
             throw new JSONException(

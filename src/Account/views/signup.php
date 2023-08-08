@@ -16,9 +16,9 @@ use App\AppUtils;
 <div class="clear"></div>
 
 <form id="signup-form">
-    
+
     <?=(new AppUtils())->getCSRF()->getCSRFFormField()?>
-    
+
     <label for="email"><?= Lang::translate('E-mail') ?></label>
     <input id="email" type="text" name="email">
 
@@ -32,14 +32,14 @@ use App\AppUtils;
     <br />
 
     <label for="captcha"><?= Lang::translate('Enter above image text (click to get a new image). Case of the text does not matter') ?>:</label>
-    <input id="captcha" autocomplete="off" type="text" name="captcha">
+    <input id="captcha" value="1234" autocomplete="off" type="text" name="captcha">
 
     <button id="submit" class="btn btn-primary"><?= Lang::translate('Send') ?></button>
     <div class="loadingspinner hidden"></div>
 </form>
 
 <script type="module" nonce="<?=(new AppUtils())->getCSP()->getNonce();?>">
-    
+
     import {Pebble} from '/js/pebble.js?v=<?=AppMain::VERSION?>';
 
     document.getElementById('captcha').addEventListener('click', function() {
@@ -63,7 +63,7 @@ use App\AppUtils;
             if (res.error === false) {
                 Pebble.redirect(res.redirect);
             } else {
-                
+
                 Pebble.setFlashMessage(res.message, 'error');
             }
 

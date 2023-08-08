@@ -1,3 +1,5 @@
+config-locale
+
 .DS_Store
 vendor
 logs
